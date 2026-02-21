@@ -3,7 +3,6 @@
   --text-color: #000000;
   --card-bg: #f4f4f4;
   --card-border: #000000;
-
 }
 
 body.light {
@@ -24,7 +23,6 @@ body {
   background-color: var(--bg-color);
   color: var(--text-color);
   transition: background-color 0.3s, color 0.3s;
-
 }
 
 header, footer {
@@ -34,25 +32,23 @@ header, footer {
   padding: 1rem;
 }
 
-
 a {
-  color: green;       /* default link color */
+  color: green;
   text-decoration: underline;
   transition: color 0.3s;
 }
 
 a:visited {
-  color: lawngreen;       /* visited link color */
+  color: lawngreen;
 }
 
 a:hover {
-  color: goldenrod;               /* hover color */
+  color: goldenrod;
 }
 
 a:active {
-  color: darkorange;              /* active (clicked) color */
+  color: darkorange;
 }
-
 
 main {
   display: flex;
@@ -64,7 +60,8 @@ h1,h2,h3,h4,h5 {
   text-align: center;
   font-weight: bold;
 }
-p{
+
+p {
   text-align: center;
 }
 
@@ -131,17 +128,22 @@ img {
 
 .table-container {
   width: 100%;
-  overflow-x: auto;   /* allows horizontal scroll on small screens */
+  overflow-x: auto;
   margin: 1rem 0;
 }
 
 table {
   width: 100%;
   border-collapse: collapse;
-  min-width: 300px;   /* ensures readability on very small screens */
+  min-width: 300px;
 }
-caption{
+
+caption {
   font-family: cursive;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+  text-align: left;
+  color: var(--text-color);
 }
 
 thead {
@@ -163,14 +165,14 @@ tr:hover {
   background-color: rgba(0,0,0,0.05);
 }
 
-/* Responsive adjustments */
+/* Responsive adjustments for tables */
 @media (max-width: 600px) {
   table, thead, tbody, th, td, tr {
-    display: block;   /* stack cells vertically */
+    display: block;
   }
 
   thead {
-    display: none;    /* hide header row on small screens */
+    display: none; /* hide header row */
   }
 
   tr {
@@ -178,12 +180,14 @@ tr:hover {
     border: 1px solid var(--card-border);
     border-radius: 6px;
     padding: 0.5rem;
+    background: var(--card-bg);
   }
 
   td {
     border: none;
     position: relative;
     padding-left: 50%;
+    margin-bottom: 0.5rem;
   }
 
   td::before {
@@ -193,18 +197,16 @@ tr:hover {
     white-space: nowrap;
     font-weight: bold;
     color: var(--text-color);
-    content: attr(data-label); /* show header label */
+    content: attr(data-label);
   }
 }
 
-
-
 #backToTop {
-  display: none;              /* hidden by default */
-  position: fixed;            /* stays in place */
-  bottom: 50px;               /* distance from bottom */
-  right: 5px;                /* distance from right */
-  z-index: 99;                /* on top of other elements */
+  display: none;
+  position: fixed;
+  bottom: 50px;
+  right: 5px;
+  z-index: 99;
   font-size: 18px;
   border: none;
   outline: none;
@@ -220,17 +222,16 @@ tr:hover {
   background-color: #555;
 }
 
-
 #themeBtn {
-  position: fixed;       /* stays in place */
-  top: 3px;             /* distance from top */
-  right: 5px;           /* distance from right */
-  z-index: 100;          /* ensures it’s above other elements */
+  position: fixed;
+  top: 3px;
+  right: 5px;
+  z-index: 100;
   padding: 10px 15px;
-  border: 2px solid --card-border;
+  border: 2px solid var(--card-border);
   border-radius: 6px;
   background: var(--bg-color);
-  color: var(--text-color);           /* adapts to theme */
+  color: var(--text-color);
   cursor: pointer;
   transition: background-color 0.3s, color 0.3s;
 }
